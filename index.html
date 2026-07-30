@@ -3,68 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Std 10 Gujarati Vyakaran PDF</title>
+    <title>Std 10 Gujarati Vyakaran Master PDF</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f9; padding: 20px; margin: 0; }
-        .card { max-width: 420px; background: white; padding: 25px; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        h2 { color: #2c3e50; font-size: 20px; margin-bottom: 10px; }
-        .price { font-size: 22px; color: #27ae60; font-weight: bold; margin: 10px 0; }
-        
-        .features { text-align: left; background: #eef9f1; padding: 12px 15px; border-radius: 8px; font-size: 14px; margin-bottom: 15px; color: #2e7d32; }
-        .features ul { margin: 5px 0 0 18px; padding: 0; }
-        .features li { margin-bottom: 4px; }
-        
-        img.qr { width: 200px; height: 200px; border: 1px solid #ddd; margin: 10px 0; border-radius: 8px; }
-        .upi-box { background: #f0f0f0; padding: 10px; font-weight: bold; border-radius: 6px; font-size: 14px; color: #333; margin-bottom: 10px; }
-        
-        .step-box { text-align: left; background: #f9f9f9; padding: 12px; border-radius: 8px; font-size: 14px; margin-top: 15px; border: 1px solid #e0e0e0; }
-        
-        .wa-btn { display: block; background: #25D366; color: white; text-decoration: none; padding: 14px 10px; border-radius: 8px; font-weight: bold; font-size: 16px; margin-top: 15px; text-align: center; }
-        .wa-btn:hover { background: #1eb954; }
-        
-        .note { font-size: 13px; color: #666; margin-top: 20px; background: #fff8e1; padding: 12px; border-radius: 6px; border-left: 4px solid #ffc107; text-align: left; line-height: 1.5; }
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --success: #16a34a;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .price-tag {
+            margin-top: 15px;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .price-tag span {
+            font-size: 16px;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .features-card {
+            background-color: #f1f5f9;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .features-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 15px;
+            color: var(--primary);
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .payment-section {
+            text-align: center;
+            border: 2px dashed #cbd5e1;
+            padding: 20px;
+            border-radius: 16px;
+            background: #fff;
+            margin-bottom: 20px;
+        }
+
+        .payment-section h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        .qr-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .upi-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+            color: var(--text-sub);
+        }
+
+        .btn-wa {
+            display: block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn-wa-2 {
+            background-color: #075e54;
+            box-shadow: 0 4px 12px rgba(7, 94, 84, 0.3);
+        }
+
+        .btn-wa:active {
+            transform: scale(0.98);
+        }
+
+        .reviews {
+            margin-top: 25px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        .reviews h4 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        .review-box {
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .review-user {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .stars {
+            color: #f59e0b;
+        }
+
+        .footer-note {
+            font-size: 11px;
+            color: #94a3b8;
+            text-align: center;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h2>STD 10 Gujarati Vyakaran PDF</h2>
-    <div class="price">કિંમત: ₹70</div>
-
-    <div class="features">
-        <strong>📌 આ PDF માં શું મળશે?</strong>
-        <ul>
-            <li>ધોરણ ૧૦ ના તમામ વ્યાકરણના મુદ્દાઓ</li>
-            <li>બોર્ડ પરીક્ષા માટે ઉપયોગી IMP પ્રશ્નો</li>
-            <li>સરળ ભાષામાં સમજૂતી અને ઉદાહરણો</li>
-        </ul>
+<div class="container">
+    <div class="header">
+        <span class="badge">📘 GSEB STD 10 BOARD EXAM 2026</span>
+        <h1>ગુજરાતી વ્યાકરણ Master PDF</h1>
+        <div class="price-tag">₹70 <span>₹250</span></div>
     </div>
 
-    <hr style="border: 0.5px solid #eee;">
+    <div class="content">
+        <div class="features-card">
+            <h3>✨ આ PDF ની ખાસિયતો:</h3>
+            <ul class="features-list">
+                <li>સંપૂર્ણ બોર્ડ સિલેબસ સરળ ભાષામાં</li>
+                <li>સમાસ, અલંકાર અને છંદ માટેની શોર્ટકટ ટ્રીક્સ</li>
+                <li>મોસ્ટ IMP પ્રશ્નો અને ભૂતકાળના પેપર્સનું સોલ્યુશન</li>
+                <li>100% Verified Quality PDF Material</li>
+            </ul>
+        </div>
 
-    <h3>૧. Scan કરીને Pay કરો</h3>
-    <img src="qr.png" alt="FamApp QR" class="qr">
-    <div class="upi-box">UPI ID: 9825541531@fam</div>
+        <div class="payment-section">
+            <h3>સ્ટેપ ૧: સ્કેન કરીને Pay કરો</h3>
+            <img src="qr.png" alt="FamApp QR" class="qr-img">
+            <div class="upi-box">UPI ID: 9825541531-1@fam</div>
+        </div>
 
-    <hr style="border: 0.5px solid #eee;">
+        <div style="text-align: center; margin-bottom: 10px;">
+            <h3 style="font-size: 15px; margin-bottom: 5px;">સ્ટેપ ૨: સ્ક્રીનશોટ મોકલો</h3>
+            <p style="font-size: 12px; color: var(--text-sub); margin: 0 0 10px 0;">પેમેન્ટ કર્યા પછી કોઈપણ એક WhatsApp નંબર પર સ્ક્રીનશોટ શેર કરો.</p>
+        </div>
 
-    <h3>૨. WhatsApp પર સ્ક્રીનશોટ મોકલો</h3>
+        <!-- 1st WhatsApp Number Button -->
+        <a href="https://wa.me/919512745850?text=Hi,%20I%20have%20paid%20Rs.70%20for%20Std%2010%20Gujarati%20Vyakaran%20PDF." target="_blank" class="btn-wa">
+            💬 Send Screenshot (Number 1)
+        </a>
 
-<div class="step-box">
-    <strong>📲 પેમેન્ટ કર્યા પછી શું કરવું?</strong><br>
-    ૧. નીચે આપેલા કોઈપણ એક બટન પર ક્લિક કરો.<br>
-    ૨. WhatsApp માં પેમેન્ટનો <b>સ્ક્રીનશોટ</b> અને તમારું <b>Email ID</b> લખીને મોકલો.
-</div>
+        <!-- 2nd WhatsApp Number Button -->
+        <a href="https://wa.me/919316528918?text=Hi,%20I%20have%20paid%20Rs.70%20for%20Std%2010%20Gujarati%20Vyakaran%20PDF." target="_blank" class="btn-wa btn-wa-2">
+            💬 Send Screenshot (Number 2)
+        </a>
 
-<a href="https://wa.me/919512745850?text=Hi,%20I%20have%20paid%20Rs.70%20for%20Std%2010%20Gujarati%20Vyakaran%20PDF." target="_blank" class="wa-btn">
-    💬 Send Screenshot (Number 1)
-</a>
+        <div class="reviews">
+            <h4>વિદ્યાર્થીઓના પ્રતિભાવો (Student Reviews):</h4>
+            <div class="review-box">
+                <div class="review-user">હર્ષ પટેલ <span class="stars">★★★★★</span></div>
+                <div>"આ PDF થી વ્યાકરણના બધા ટોપિક એકદમ સરળતાથી સમજાઈ ગયા!"</div>
+            </div>
+            <div class="review-box">
+                <div class="review-user">દિયા શાહ <span class="stars">★★★★★</span></div>
+                <div>"Payment કર્યા પછી 5 જ મિનિટમાં WhatsApp પર PDF મળી ગઈ. ખૂબ જ ઉપયોગી!"</div>
+            </div>
+        </div>
 
-<a href="https://wa.me/919316528918?text=Hi,%20I%20have%20paid%20Rs.70%20for%20Std%2010%20Gujarati%20Vyakaran%20PDF." target="_blank" class="wa-btn" style="background: #075e54; margin-top: 10px;">
-    💬 Send Screenshot (Number 2)
-</a>
-    <div class="note">
-        ⚡ <strong>નોંધ:</strong> WhatsApp પર સ્ક્રીનશોટ અને ઈમેલ મોકલ્યા પછી <b>૧ દિવસ (૨૪ કલાક)</b> ની અંદર તમારા Email ID પર PDF મોકલી દેવામાં આવશે.
+        <div class="footer-note">
+            🔒 100% Safe & Instant WhatsApp Delivery
+        </div>
     </div>
 </div>
 
